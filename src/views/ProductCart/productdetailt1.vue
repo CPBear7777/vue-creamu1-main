@@ -2,10 +2,13 @@
     <br>
     <br>
     <div class="container ">
+        <p>
+            {{ props.va.name }}
+        </p>
         <!-- BACK TO PRODUCT LIST -->
         <div>
             <button class="btn btn-light" @click="backToPL" style="font-weight: bold; font-size: 36px;"><img
-                    src="../img/goback.png" alt="back">Back</button>
+                    src="../../assets/img/productcart/goback.png" alt="back">Back</button>
         </div>
         <div class="row justify-content-center">
             <!-- image zone -->

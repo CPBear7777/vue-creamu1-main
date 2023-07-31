@@ -9,6 +9,10 @@ import Cart from "../views/customerzied/Cart.vue";
 import ProductPage from '../views/ProductCart/productSurvey.vue';
 import CartDetailDisplayPage from '../views/ProductCart/Cartt.vue'
 
+// Ma
+import Member from "../views/Member/Member.vue";
+import MemberUpdate from "../views/Member/MemberUpdate.vue";
+import OrderHistory from "../views/Member/OrderHistory.vue";
 
 import PresentationView from "../views/Presentation/PresentationView.vue";
 import AboutView from "../views/LandingPages/AboutUs/AboutView.vue";
@@ -34,6 +38,7 @@ import ElDropdowns from "../layouts/sections/elements/dropdowns/DropdownsView.vu
 import ElProgressBars from "../layouts/sections/elements/progress-bars/ProgressBarsView.vue";
 import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -67,6 +72,18 @@ component: Cart,
     { 
   path: '/cartDetailDisplay', 
   component: CartDetailDisplayPage ,
+},
+{ // Ma star
+  path: "/Member",
+  component: Member,
+},
+{
+  path: "/MemberUpdate",
+  component: MemberUpdate,
+},
+{ // end
+  path: "/OrderHistory",
+  component: OrderHistory,
 },
     {
       path: "/pages/landing-pages/about-us",

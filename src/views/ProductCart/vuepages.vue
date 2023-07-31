@@ -22,7 +22,7 @@
                         <input v-model="searchText" type="text" class="form-control" placeholder="關鍵字" aria-label="關鍵字">
                         <div class="input-group-append">
                             <button @click="searchProducts" class="btn btn-primary" style="margin-left: 5px;" type="submit">
-                                <img src="../img/whitesearch-24.png">
+                                <img src="../../assets/img/productcart/whitesearch-24.png">
                             </button>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                             v-if="totalPages">Next</button>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
         <div v-else>
             <div class="container">
@@ -163,7 +163,7 @@ const totalPages = computed(() => Math.ceil(products.value.length / itemsPerPage
 // 目前显示的页数
 const currentPage = ref(0);
 // 目前分页的数据
-let currentPageData = ref([]);
+const currentPageData = ref([]);
 
 // 初始化数据
 async function initV() {
@@ -181,15 +181,15 @@ async function initV() {
 // 计算当前页的商品数据
 function calCurrentData(page) {
     if (products === null) {
-        currentPageData = [];
+        currentPageData.value = [];
     }
     else {
 
-        currentPageData = [];
+        currentPageData.value = [];
         if (page * itemsPerPage > products.length) {
-            currentPageData = products.value.slice((page * itemsPerPage), products.length);
+            currentPageData.value = products.value.slice((page * itemsPerPage), products.length);
         } else {
-            currentPageData = products.value.slice((page * itemsPerPage), page * itemsPerPage + itemsPerPage);
+            currentPageData.value = products.value.slice((page * itemsPerPage), page * itemsPerPage + itemsPerPage);
         }
     }
 }

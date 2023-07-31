@@ -93,7 +93,7 @@ const apiurl = "https://localhost:7098/";
 const getAll = "api/TempOrderDetailsAPI";
 const deleteById = "api/TempOrderDetailsAPI"
 const postById = "api/TempOrderDetailsAPI";
-let memberIdTosql = 1;
+const memberIdTosql = 1;
 const employeeId = 1;
 
 //temporderdata
@@ -104,6 +104,7 @@ const totalPrice = ref(0);
 function initV() {
     //checkMemberLogin();
     searchTODData();
+   
 }
 
 //check member login
@@ -119,6 +120,7 @@ function checkMemberLogin() {
 //search data
 async function searchTODData() {
     let response = await axios.get(`${apiurl}${getAll}/${memberIdTosql}`);
+    
     if (response === null) {
         todData.value = [];
     }

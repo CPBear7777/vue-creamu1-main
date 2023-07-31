@@ -1,6 +1,6 @@
 /*
 =========================================================
-* Vue Material Kit 2 - v1.0.0
+* Vue 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/vue-material-kit-pro

@@ -17,5 +17,7 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
+   <h2 class="row">
+  </h2>
   <router-view />
 </template>
