@@ -1,4 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
+
+// 佩璇
+import Review from "../views/customerzied/Review.vue";
+import Message from "../views/customerzied/Message.vue";
+import WebGL from "../views/customerzied/CustomizedP.vue";
+import Cart from "../views/customerzied/Cart.vue";
+// 一生
+import ProductPage from '../views/ProductCart/productSurvey.vue';
+import CartDetailDisplayPage from '../views/ProductCart/Cartt.vue'
+
+
 import PresentationView from "../views/Presentation/PresentationView.vue";
 import AboutView from "../views/LandingPages/AboutUs/AboutView.vue";
 import ContactView from "../views/LandingPages/ContactUs/ContactView.vue";
@@ -31,6 +42,32 @@ const router = createRouter({
       name: "presentation",
       component: PresentationView,
     },
+    // 佩璇
+    {
+path:"/Review", //路徑
+      component: Review, //對應要載入的元件
+    },
+    {
+      path: "/message",
+      component: Message,
+    },
+    {
+      path: "/customized",
+      component: WebGL,
+    },
+    {
+      path: "/cart",
+component: Cart,
+    },
+    // 一生
+    { 
+      path: '/productList', 
+  component: ProductPage ,
+},
+    { 
+  path: '/cartDetailDisplay', 
+  component: CartDetailDisplayPage ,
+},
     {
       path: "/pages/landing-pages/about-us",
       name: "about",
