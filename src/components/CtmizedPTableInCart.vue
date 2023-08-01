@@ -124,7 +124,7 @@
               <v-btn
                 :id="index"
                 variant="text"
-                color="secondary"
+                color="#B7582A"
                 @click="deleteItem(index)"
               >
                 Delete
@@ -136,9 +136,13 @@
     </div>
     <!-- 動態新增-結束 -->
     <hr />
-    <h2>Total:{{ TotalPrice() }}</h2>
-    <v-row justify="center">
-      <v-col cols="9" align="end">
+    <v-row justify="end">
+      <v-col cols="auto">
+        <h5>Customized Product List Total:{{ TotalPrice() }}</h5>
+      </v-col>
+    </v-row>
+    <v-row justify="end">
+      <v-col cols="6" align="end">
         <v-btn
           v-if="products.length != 0"
           size="x-large"
@@ -147,13 +151,13 @@
           >Check out</v-btn
         >
       </v-col>
-      <v-col cols="3" align="end">
+      <v-col cols="6" align="end">
         <v-btn
           v-if="products.length != 0"
           href="http://localhost:3000/customized"
           size="x-large"
           color="#B7582A"
-          >Buy More</v-btn
+          >Buy More Customized Product</v-btn
         >
       </v-col>
     </v-row>

@@ -2,7 +2,6 @@
   <br />
   <br />
   <br />
-  <h2>Shopping Cart</h2>
   <CtmizedPTable></CtmizedPTable>
 </template>
 
