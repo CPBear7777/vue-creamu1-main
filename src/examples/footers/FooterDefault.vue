@@ -1,5 +1,5 @@
 <script setup>
-import logoDark from "@/assets/img/logo-ct-dark.png";
+import logoDark from "@/assets/img/logo/creamU.jpg";
 defineProps({
   brand: {
     type: Object,
@@ -7,7 +7,7 @@ defineProps({
     logo: String,
     route: "",
     default: () => ({
-      name: "Material Kit 2",
+      name: "CreamU",
       logo: logoDark,
       route: "/"
     })
@@ -19,23 +19,23 @@ defineProps({
     default: () => [
       {
         icon: '<i class="fab fa-facebook text-lg opacity-8"></i>',
-        link: "https://www.facebook.com/CreativeTim/"
+        link: "https://www.facebook.com"
       },
       {
         icon: '<i class="fab fa-twitter text-lg opacity-8"></i>',
-        link: "https://twitter.com/creativetim"
+        link: "https://twitter.com"
       },
-      {
-        icon: '<i class="fab fa-dribbble text-lg opacity-8"></i>',
-        link: "https://dribbble.com/creativetim"
-      },
-      {
-        icon: '<i class="fab fa-github text-lg opacity-8"></i>',
-        link: "https://github.com/creativetimofficial"
-      },
+      // {
+      //   icon: '<i class="fab fa-dribbble text-lg opacity-8"></i>',
+      //   link: "https://dribbble.com"
+      // },
+      // {
+      //   icon: '<i class="fab fa-github text-lg opacity-8"></i>',
+      //   link: "https://github.com"
+      // },
       {
         icon: '<i class="fab fa-youtube text-lg opacity-8"></i>',
-        link: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w"
+        link: "https://www.youtube.com"
       }
     ]
   },
@@ -52,70 +52,70 @@ defineProps({
         name: "company",
         items: [
           {
-            name: "about us",
-            href: "https://www.creative-tim.com/presentation"
+            name: "About Us",
+            href: "http://localhost:3000/"
           },
-          {
-            name: "freebies",
-            href: "https://www.creative-tim.com/templates/free"
-          },
-          {
-            name: "premium tools",
-            href: "https://www.creative-tim.com/templates/premium"
-          },
-          { name: "blog", href: "https://www.creative-tim.com/blog" }
+          // {
+          //   name: "Latest News",
+          //   href: "http://localhost:3000/"
+          // },
+          // {
+          //   name: "Precautions",
+          //   href: "http://localhost:3000/"
+          // },
+          // { name: "Process Explanation", href: "http://localhost:3000/" }
         ]
       },
       {
-        name: "resources",
+        name: "Latest News",
         items: [
-          { name: "illustrations", href: "https://iradesign.io/" },
+          // { name: "Latest News", href: "http://localhost:3000/" },
           {
-            name: "bits & snippets",
-            href: "https://www.creative-tim.com/bits"
+            name: "New Information",
+            href: "http://localhost:3000/"
           },
-          {
-            name: "affiliate program",
-            href: "https://www.creative-tim.com/affiliates/new"
-          }
+          // {
+          //   name: "affiliate program",
+          //   href: "https://www.creative-tim.com/affiliates/new"
+          // }
         ]
       },
       {
-        name: "help & support",
+        name: "Precautions",
         items: [
           {
-            name: "contact us",
-            href: "https://www.creative-tim.com/contact-us"
+            name: "Common Problem",
+            href: "http://localhost:3000/"
           },
           {
-            name: "knowledge center",
-            href: "https://www.creative-tim.com/knowledge-center"
+            name: "Intellectual Property-Declaration",
+            href: "http://localhost:3000/"
           },
-          {
-            name: "custom development",
-            href: "https://services.creative-tim.com/"
-          },
-          {
-            name: "sponsorships",
-            href: "https://www.creative-tim.com/sponsorships"
-          }
+          // {
+          //   name: "custom development",
+          //   href: "https://services.creative-tim.com/"
+          // },
+          // {
+          //   name: "sponsorships",
+          //   href: "https://www.creative-tim.com/sponsorships"
+          // }
         ]
       },
       {
-        name: "legal",
+        name: "Instructions For Use",
         items: [
           {
-            name: "terms & conditions",
+            name: "Purchase Process",
             href: "https://www.creative-tim.com/terms"
           },
           {
-            name: "privacy policy",
-            href: "https://www.creative-tim.com/privacy"
+            name: "Customized Process",
+            href: "http://localhost:3000/"
           },
-          {
-            name: "licenses (EULA)",
-            href: "https://www.creative-tim.com/license"
-          }
+          // {
+          //   name: "licenses (EULA)",
+          //   href: "https://www.creative-tim.com/license"
+          // }
         ]
       }
     ]
@@ -171,9 +171,9 @@ defineProps({
             <p class="text-dark my-4 text-sm font-weight-normal">
               All rights reserved. Copyright ©
               {{ new Date().getFullYear() }}
-              Material Kit by
-              <a href="https://www.creative-tim.com" target="_blank"
-                >Creative Tim</a
+              Create from
+              <a href="http://localhost:3000/" target="_blank"
+                >資展協會133期Team4</a
               >.
             </p>
           </div>
