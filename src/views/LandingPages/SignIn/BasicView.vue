@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted,ref } from "vue";
 
 // example components
 import DefaultNavbar from "@/examples/navbars/NavbarDefault.vue";
@@ -12,9 +12,43 @@ import MaterialButton from "@/components/MaterialButton.vue";
 
 // material-input
 import setMaterialInput from "@/assets/js/material-input";
+
+const email =ref('');
+const password =ref('');
+
 onMounted(() => {
   setMaterialInput();
 });
+//登入
+function login() {
+  // Perform login using backend API (PHP in this case)
+  const formData = new FormData();
+  formData.append('username', email.value);
+  formData.append('password', password.value);
+  
+  
+  console.log(email.value);
+  fetch('login.php', {
+    method: 'POST',
+    body: formData,
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      // Handle successful login, e.g., redirect to another page
+      alert('Login successful!');
+      // You can also use Vue Router to handle page navigation
+    } else {
+      loginError.value = data.message;
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    loginError.value = 'An error occurred while logging in.';
+  });
+}
+
+
 </script>
 <template>
   <DefaultNavbar transparent />
@@ -63,18 +97,20 @@ onMounted(() => {
                 </div>
               </div>
               <div class="card-body">
-                <form role="form" class="text-start">
+                <!-- <form role="form" class="text-start"> -->
                   <MaterialInput
                     id="email"
                     class="input-group-outline my-3"
                     :label="{ text: 'Email', class: 'form-label' }"
                     type="email"
+                    v-model="email"
                   />
                   <MaterialInput
                     id="password"
                     class="input-group-outline mb-3"
                     :label="{ text: 'Password', class: 'form-label' }"
                     type="password"
+                    v-model="password"
                   />
                   <MaterialSwitch
                     class="d-flex align-items-center mb-3"
@@ -90,6 +126,7 @@ onMounted(() => {
                       variant="gradient"
                       color="success"
                       fullWidth
+                      @click="login"
                       >Sign in</MaterialButton
                     >
                   </div>
@@ -101,7 +138,7 @@ onMounted(() => {
                       >Sign up</a
                     >
                   </p>
-                </form>
+                <!-- </form> -->
               </div>
             </div>
           </div>
