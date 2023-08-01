@@ -38,6 +38,56 @@ onUnmounted(() => {
   body.classList.remove("presentation-page");
   body.classList.remove("bg-gray-200");
 });
+//旋轉木馬
+
+        const colors= [
+          'indigo',
+          'warning',
+          'pink darken-2',
+          'red lighten-1',
+          'deep-purple accent-4',
+        ]
+        const slides=[
+          'First',
+          'Second',
+          'Third',
+          'Fourth',
+          'Fifth',
+        ]
+
+        //
+        const item= [
+          {
+            src: '../../../public/cycle/head1.png',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          },
+        ]
+        const items= [
+          {
+            src: '../../../public/cycle/body1.png',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          },
+        ]
+        
+      
+    
+  
 </script>
 
 <template>
@@ -160,7 +210,8 @@ onUnmounted(() => {
         </div>
       </div>
     </div> -->
-    <v-carousel
+    <!-- first -->
+    <!-- <v-carousel
     cycle
     height="400"
     hide-delimiter-background
@@ -181,8 +232,40 @@ onUnmounted(() => {
         </div>
       </v-sheet>
     </v-carousel-item>
+  </v-carousel>  -->
+    <!-- ---------------------------------------------first-->
+  <v-carousel show-arrows="hover"
+  cycle
+  vertical-delimiters="left"
+  interval="2000"
+  height="600"
+  reverse
+  progress="true"
+  >
+    <v-carousel-item
+      v-for="(item,i) in item"
+      :key="i"
+      :src="item.src"
+      cover
+      
+    ></v-carousel-item>
   </v-carousel>
-
+    <!-- --------------------------------------------- second-->
+  <v-carousel show-arrows="hover"
+  cycle
+  interval="2000"
+  height="400"
+  progress="true"
+  >
+    <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+      cover
+      
+    ></v-carousel-item>
+  </v-carousel>
+<!-- --------------------------------------------- -->
     <div class="container">
       <div class="row">
         <div class="d-flex flex-column w-100 text-center p-5 mb-8">
