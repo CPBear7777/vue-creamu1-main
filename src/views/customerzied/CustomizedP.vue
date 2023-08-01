@@ -1,39 +1,41 @@
 <template>
+  <br />
+  <br />
+  <br />
   <v-container>
     <h1>Customized Your Model</h1>
     <v-card variant="" class="mx-auto">
       <v-container>
         <v-row justify="center">
           <v-col cols="10">
-            <v-img
+            <!-- <v-img
               height="250"
               cover
               src="../../img/000.jpg"
               margin-right="50"
               margin-left="50"
-            >
-              <div padding="50">
-                <br />
-                <p class="text-center">
-                  You have the power to customize your model right here in the
-                  canvas. Simply click on the combobox and choose the model for
-                  each body part. Take full control of the look and feel of your
-                  model.
-                </p>
-                <br />
-                <p class="text-center">
-                  Not only that, but you can also select the material that you
-                  absolutely adore. Let your creativity shine as you explore
-                  different materials to give your model that perfect touch.
-                </p>
-                <br />
-                <p class="text-center">
-                  Unleash your imagination and create a truly unique and
-                  personalized model. The possibilities are endless, so go ahead
-                  and make your masterpiece come to life.
-                </p>
-              </div>
-            </v-img>
+            > -->
+            <div padding="50">
+              <p class="text-center">
+                You have the power to customize your model right here in the
+                canvas. Simply click on the combobox and choose the model for
+                each body part. Take full control of the look and feel of your
+                model.
+              </p>
+
+              <p class="text-center">
+                Not only that, but you can also select the material that you
+                absolutely adore. Let your creativity shine as you explore
+                different materials to give your model that perfect touch.
+              </p>
+
+              <p class="text-center">
+                Unleash your imagination and create a truly unique and
+                personalized model. The possibilities are endless, so go ahead
+                and make your masterpiece come to life.
+              </p>
+            </div>
+            <!-- </v-img> -->
           </v-col>
         </v-row>
       </v-container>

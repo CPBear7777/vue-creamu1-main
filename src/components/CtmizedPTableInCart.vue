@@ -10,7 +10,7 @@
             <br />
             <br />
             <v-btn
-              href="http://localhost:5173/WebGL2"
+              href="http://localhost:3000/customized"
               prepend-icon="mdi-cart-arrow-down"
               size="x-large"
               color="#B7582A"
@@ -137,14 +137,23 @@
     <!-- 動態新增-結束 -->
     <hr />
     <h2>Total:{{ TotalPrice() }}</h2>
-    <v-row justify="right">
-      <v-col>
+    <v-row justify="center">
+      <v-col cols="9" align="end">
         <v-btn
           v-if="products.length != 0"
           size="x-large"
           color="#e5d2ab"
           @click="SaveToCombineDetail"
           >Check out</v-btn
+        >
+      </v-col>
+      <v-col cols="3" align="end">
+        <v-btn
+          v-if="products.length != 0"
+          href="http://localhost:3000/customized"
+          size="x-large"
+          color="#B7582A"
+          >Buy More</v-btn
         >
       </v-col>
     </v-row>

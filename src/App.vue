@@ -14,10 +14,19 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 import { RouterView } from "vue-router";
+import NavbarDefault from "../src/examples/navbars/NavbarDefault.vue"; //../..//examples/navbars/NavbarDefault.vue
+import DefaultFooter from "../src/examples/footers/FooterDefault.vue"; //../../examples/footers/FooterDefault.vue
 </script>
 
 <template>
-   <h2 class="row">
-  </h2>
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <NavbarDefault :sticky="true" />
+      </div>
+    </div>
+  </div>
+  <h2 class="row"></h2>
   <router-view />
+  <DefaultFooter />
 </template>

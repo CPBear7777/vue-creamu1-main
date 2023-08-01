@@ -1,12 +1,13 @@
 <template>
-    <h2>Shopping Cart</h2>
-    <CtmizedPTable></CtmizedPTable>
+  <br />
+  <br />
+  <br />
+  <h2>Shopping Cart</h2>
+  <CtmizedPTable></CtmizedPTable>
 </template>
-    
+
 <script setup>
-    import CtmizedPTable from "../../components/CtmizedPTableInCart.vue";
+import CtmizedPTable from "../../components/CtmizedPTableInCart.vue";
 </script>
 
-<style scope>
-    
-</style>
+<style scope></style>

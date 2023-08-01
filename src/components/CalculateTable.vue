@@ -121,8 +121,17 @@
   <p class="TotalP">Total Price:{{ calculateSum() * amount }}</p>
 
   <br />
+  <v-row>
+    <v-col cols="9" align="end">
+      <v-btn size="x-large" color="#e5d2ab" href="http://localhost:3000/Cart"
+        >Go to Cart</v-btn
+      >
+    </v-col>
+    <v-col cols="3" align="end">
+      <v-btn size="x-large" color="#e5d2ab" @click="AddToCart">Buy Now</v-btn>
+    </v-col>
+  </v-row>
 
-  <v-btn size="x-large" color="#e5d2ab" @click="AddToCart">Buy Now</v-btn>
   <!-- <v-btn size="x-large" color="#e5d2ab" @click="Cclean">Delete</v-btn> -->
   <!-- <v-btn size="x-large" color="#e5d2ab" @click="ScreenShot">Test</v-btn> -->
 </template>

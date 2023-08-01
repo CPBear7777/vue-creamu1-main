@@ -30,17 +30,19 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
         <div class="col-md-8">
           <div class="row mt-4">
             <div class="col-md-6 mt-md-0 mt-5">
+              <!-- <v-img src="../../../assets/img/CDemo1.jpg"> </v-img> -->
               <ExampleCard
                 class="shadow-lg"
                 title="大神客戶1"
-                image="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages/about-us.jpg"
+                image="src/assets/img/material.gif"
               />
             </div>
             <div class="col-md-6 mt-md-0 mt-5">
+              <!-- <v-img src="../../../assets/img/CDemo1.jpg"> </v-img> -->
               <ExampleCard
                 class="shadow-lg"
                 title="大神客戶1"
-                image="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages/contact.jpg"
+                image="src/assets/img/head.gif"
               />
             </div>
           </div>
@@ -49,14 +51,14 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
               <ExampleCard
                 classes="mt-5"
                 title="大神客戶1"
-                :image="imgSigninCover"
+                image="src/assets/img/CDemo3.jpg"
               />
             </div>
             <div class="col-md-6 mt-md-0 mt-5">
               <ExampleCard
                 classes="shadow-lg"
                 title="大神客戶1"
-                image="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages/author.jpg"
+                image="src/assets/img/CDemo4.jpg"
               />
             </div>
           </div>

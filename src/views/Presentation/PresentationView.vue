@@ -2,8 +2,7 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
-import DefaultFooter from "../../examples/footers/FooterDefault.vue";
+
 import Header from "../../examples/Header.vue";
 // import FilledInfoCard from "../../examples/cards/infoCards/FilledInfoCard.vue";
 
@@ -42,13 +41,6 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="container position-sticky z-index-sticky top-0">
-    <div class="row">
-      <div class="col-12">
-        <NavbarDefault :sticky="true" />
-      </div>
-    </div>
-  </div>
   <Header>
     <div
       class="page-header min-vh-75"
@@ -58,14 +50,14 @@ onUnmounted(() => {
       <div class="container">
         <div class="row">
           <div class="col-lg-7 text-center mx-auto position-relative">
-            <h1 
+            <h1
               class="text-white pt-3 mt-n5 me-2"
-              :style="{ display: 'inline-block ' }" 
+              :style="{ display: 'inline-block ' }"
             >
               CreamU
             </h1>
             <p class="lead text-white px-5 mt-3" :style="{ fontWeight: '500' }">
-             Create for you ,Create from us.
+              Create for you ,Create from us.
             </p>
           </div>
         </div>
@@ -168,27 +160,19 @@ onUnmounted(() => {
       </div>
     </div> -->
     <v-carousel
-    cycle
-    height="400"
-    hide-delimiter-background
-    show-arrows="hover"
-  >
-    <v-carousel-item
-      v-for="(slide, i) in slides"
-      :key="i"
+      cycle
+      height="400"
+      hide-delimiter-background
+      show-arrows="hover"
     >
-      <v-sheet
-        :color="colors[i]"
-        height="100%"
-      >
-        <div class="d-flex fill-height justify-center align-center">
-          <div class="text-h2">
-            {{ slide }} Slide
+      <v-carousel-item v-for="(slide, i) in slides" :key="i">
+        <v-sheet :color="colors[i]" height="100%">
+          <div class="d-flex fill-height justify-center align-center">
+            <div class="text-h2">{{ slide }} Slide</div>
           </div>
-        </div>
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
+        </v-sheet>
+      </v-carousel-item>
+    </v-carousel>
 
     <div class="container">
       <div class="row">
@@ -313,5 +297,4 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
-  <DefaultFooter />
 </template>
