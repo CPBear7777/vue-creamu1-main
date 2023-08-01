@@ -93,7 +93,7 @@ const apiurl = "https://localhost:7098/";
 const getAll = "api/TempOrderDetailsAPI";
 const deleteById = "api/TempOrderDetailsAPI"
 const postById = "api/TempOrderDetailsAPI";
-const memberIdTosql = 1;
+let memberIdTosql = 1;
 const employeeId = 1;
 
 //temporderdata
