@@ -22,12 +22,12 @@ import PresentationInformation from "./Sections/PresentationInformation.vue";
 //images
 import vueMkHeader from "@/assets/img/header1.jpg";
 // import wavesWhite from "@/assets/img/waves-white.svg";
-import logoBootstrap from "@/assets/img/logos/bootstrap5.jpg";
-import logoTailwind from "@/assets/img/logos/icon-tailwind.jpg";
-import logoVue from "@/assets/img/logos/vue.jpg";
-import logoAngular from "@/assets/img/logos/angular.jpg";
-import logoReact from "@/assets/img/logos/react.jpg";
-import logoSketch from "@/assets/img/logos/sketch.jpg";
+import logoBootstrap from "../../assets/img/1 (1).jpg";
+import logoTailwind from "../../assets/img/1 (2).jpg";
+import logoVue from "../../assets/img/1 (3).jpg";
+import logoAngular from "../../assets/img/1 (4).jpg";
+import logoReact from "../../assets/img/1 (5).jpg";
+import logoSketch from "../../assets/img/1 (6).jpg";
 
 //hooks
 const body = document.getElementsByTagName("body")[0];
@@ -193,13 +193,13 @@ onUnmounted(() => {
     <div class="container">
       <div class="row">
         <div class="d-flex flex-column w-100 text-center p-5 mb-8">
-          <h3>Available on these technologies</h3>
+          <h3>本網站僅供資展協會133期作業展示使用，如有任何侵權問題，歡迎告知以下任意人員</h3>
           <div class="d-flex justify-content-center mt-3 flex-wrap">
             <a
-              href="https://www.creative-tim.com/product/material-kit"
+              href="http://localhost:3000/"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              title="Bootstrap 5 - Most popular front-end component library"
+              title="1號"
             >
               <img
                 :src="logoBootstrap"
@@ -213,7 +213,7 @@ onUnmounted(() => {
               href="#"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              title="Coming Soon"
+              title="2號已離職"
             >
               <img
                 :src="logoTailwind"
@@ -223,11 +223,11 @@ onUnmounted(() => {
               />
             </a>
             <a
-              href="https://www.creative-tim.com/product/vue-material-kit-pro"
+              href="http://localhost:3000/"
               class="mx-3"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              title="Vue.js - Is a Progressive JavaScript Framework"
+              title="3號"
             >
               <img
                 :src="logoVue"
@@ -241,7 +241,7 @@ onUnmounted(() => {
               href="#"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              title="Coming Soon"
+              title="4號已殉職"
             >
               <img
                 :src="logoAngular"
@@ -251,11 +251,11 @@ onUnmounted(() => {
               />
             </a>
             <a
-              href="https://www.creative-tim.com/product/material-kit-react-pro"
+              href="http://localhost:3000/"
               class="mx-3"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              title="React – A JavaScript library for building user interfaces"
+              title="5號"
             >
               <img
                 :src="logoReact"
@@ -265,11 +265,11 @@ onUnmounted(() => {
               />
             </a>
             <a
-              class="opacity-5"
+              class="http://localhost:3000/"
               href="#"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              title="Coming Soon"
+              title="6號已失蹤，仍可幫本公司連絡"
             >
               <img
                 :src="logoSketch"
@@ -286,8 +286,8 @@ onUnmounted(() => {
       <div class="container">
         <div class="row">
           <div class="col-lg-5 ms-auto">
-            <h4 class="mb-1">Thank you for your support!</h4>
-            <p class="lead mb-0">We deliver the best web products</p>
+            <h4 class="mb-1">感謝您的瀏覽</h4>
+            <p class="lead mb-0">如果您覺得不錯的話，歡迎分享本網站</p>
           </div>
           <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-end mt-5">
             <MaterialSocialButton

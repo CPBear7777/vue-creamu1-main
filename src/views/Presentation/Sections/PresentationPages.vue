@@ -32,15 +32,15 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
             <div class="col-md-6 mt-md-0 mt-5">
               <ExampleCard
                 class="shadow-lg"
-                title="大神客戶1"
-                image="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages/about-us.jpg"
+                title="Emma"
+                image="https://p.turbosquid.com/ts-thumb/FM/XjGktc/2dbaAajl/01/jpg/1551970490/1920x1080/fit_q87/68e002f1ed081383c5e2ffda1c4f85028235fdaa/01.jpg"
               />
             </div>
             <div class="col-md-6 mt-md-0 mt-5">
               <ExampleCard
                 class="shadow-lg"
-                title="大神客戶1"
-                image="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages/contact.jpg"
+                title="Wendy"
+                image="https://p.turbosquid.com/ts-thumb/Cf/cOmiJQ/PUKyythu/02/jpg/1551601331/1920x1080/fit_q87/3b3c8980dcb5d3176daa60bad8f227adda5c8068/02.jpg"
               />
             </div>
           </div>
@@ -48,15 +48,15 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
             <div class="col-md-6 mt-md-0 mt-5">
               <ExampleCard
                 classes="mt-5"
-                title="大神客戶1"
-                :image="imgSigninCover"
+                title="M.J."
+                image="https://p.turbosquid.com/ts-thumb/Bu/spClZA/iK/001/jpg/1686900701/1920x1080/fit_q87/8ecc9f6945a5b7121468d2699161c377bf5deb15/001.jpg"
               />
             </div>
             <div class="col-md-6 mt-md-0 mt-5">
               <ExampleCard
                 classes="shadow-lg"
-                title="大神客戶1"
-                image="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages/author.jpg"
+                title="Cindy"
+                image="https://p.turbosquid.com/ts-thumb/pH/OfltUI/ra/001/jpg/1687065238/1920x1080/fit_q87/cf26ce5b76976c63ad8024bb5f21cce2ce315ccd/001.jpg"
               />
             </div>
           </div>
