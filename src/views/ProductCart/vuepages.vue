@@ -1,6 +1,8 @@
 <template>
     <br><br><br><br><br>
-    <h1>成品選購</h1>
+    <div class="d-flex justify-content-center mb-4">
+        <h1 style="font-weight: bolder;">成品選購</h1>
+    </div>
     <div>
         <!-- <div class="container">
             <div class="row justify-content-center">

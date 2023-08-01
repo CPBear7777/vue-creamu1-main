@@ -120,6 +120,8 @@ watch(
         title="CreamU"
         data-placement="bottom"
       >
+      <img src="src/assets/img/logo/CreamULT.png" alt="">
+
         CreamU
       </RouterLink>
       <RouterLink
@@ -134,6 +136,7 @@ watch(
         title="CreamU"
         data-placement="bottom"
       >
+      <img src="src/assets/img/logo/CreamULT.png" alt="">
         CreamU
       </RouterLink>
       <a
@@ -202,19 +205,19 @@ watch(
                         動物公仔系列
                       </div>
                       <RouterLink
-                        :to="{ name: 'about' }"
+                      to="/productList"
                         class="dropdown-item border-radius-md"
                       >
                         <span>有角系列</span>
                       </RouterLink>
                       <RouterLink
-                        :to="{ name: 'contactus' }"
+                        to="/productList"
                         class="dropdown-item border-radius-md"
                       >
                         <span>無角系列</span>
                       </RouterLink>
                       <RouterLink
-                        :to="{ name: 'author' }"
+                        to="/productList"
                         class="dropdown-item border-radius-md"
                       >
                         <span>居家動物系列</span>
@@ -225,7 +228,7 @@ watch(
                         客製化木偶
                       </div>
                       <RouterLink
-                        :to="{ name: 'signin-basic' }"
+                        to="/customized"
                         class="dropdown-item border-radius-md"
                       >
                         <span>馬上DIY</span>
@@ -241,19 +244,19 @@ watch(
                 動物公仔系列
                 </div>
                 <RouterLink
-                  :to="{ name: 'about' }"
+                  to="/productList"
                   class="dropdown-item border-radius-md"
                 >
                   <span>有角系列</span>
                 </RouterLink>
                 <RouterLink
-                  :to="{ name: 'contactus' }"
+                  to="/productList"
                   class="dropdown-item border-radius-md"
                 >
                   <span>無角系列</span>
                 </RouterLink>
                 <RouterLink
-                  :to="{ name: 'author' }"
+                  to="/productList"
                   class="dropdown-item border-radius-md"
                 >
                   <span>居家系列</span>
@@ -264,7 +267,7 @@ watch(
                   客製化木偶
                 </div>
                 <RouterLink
-                  :to="{ name: 'signin-basic' }"
+                to="/customized"
                   class="dropdown-item border-radius-md"
                 >
                   <span>開始DIY</span>
@@ -805,7 +808,22 @@ watch(
                   <li class="nav-item list-group-item border-0 p-0">
                     <a
                       class="dropdown-item py-2 ps-3 border-radius-md"
-                      href=" https://www.creative-tim.com/learning-lab/vue/colors/material-kit/"
+                      href="http://localhost:3000/Member"
+                    >
+                      <h6
+                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
+                      >
+                        會員資訊
+                      </h6>
+                      <span class="text-sm"
+                        >Member profile</span
+                      >
+                    </a>
+                  </li>
+                  <li class="nav-item list-group-item border-0 p-0">
+                    <a
+                      class="dropdown-item py-2 ps-3 border-radius-md"
+                      href="http://localhost:3000/cartDetailDisplay"
                     >
                       <h6
                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
@@ -814,6 +832,21 @@ watch(
                       </h6>
                       <span class="text-sm"
                         >Shopping Cart</span
+                      >
+                    </a>
+                  </li>
+                  <li class="nav-item list-group-item border-0 p-0">
+                    <a
+                      class="dropdown-item py-2 ps-3 border-radius-md"
+                      href="http://localhost:3000/OrderHistory"
+                    >
+                      <h6
+                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
+                      >
+                        歷史訂單
+                      </h6>
+                      <span class="text-sm"
+                        >Order History</span
                       >
                     </a>
                   </li>
@@ -852,7 +885,33 @@ watch(
                   </a>
                   <a
                     class="dropdown-item py-2 ps-3 border-radius-md"
-                    href="./pages/about-us.html"
+                    href="http://localhost:3000/Member"
+                  >
+                    <h6
+                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
+                    >
+                      會員資訊
+                    </h6>
+                    <span class="text-sm"
+                      >Member Profile</span
+                    >
+                  </a>
+                  <a
+                    class="dropdown-item py-2 ps-3 border-radius-md"
+                    href="http://localhost:3000/OrderHistory"
+                  >
+                    <h6
+                      class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
+                    >
+                      歷史訂單
+                    </h6>
+                    <span class="text-sm"
+                      >Order History</span
+                    >
+                  </a>
+                  <a
+                    class="dropdown-item py-2 ps-3 border-radius-md"
+                    href="http://localhost:3000/cartDetailDisplay"
                   >
                     <h6
                       class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"

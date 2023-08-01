@@ -51,7 +51,7 @@ onMounted(() => {
                     </div>
                     <div class="col-2 text-center px-1">
                       <a class="btn btn-link px-3" href="javascript:;">
-                        <i class="fa fa-github text-white text-lg"></i>
+                        <i class="fa fa-twitter text-white text-lg"></i>
                       </a>
                     </div>
                     <div class="col-2 text-center me-auto">
@@ -120,9 +120,9 @@ onMounted(() => {
                   href="https://www.creative-tim.com"
                   class="font-weight-bold text-white"
                   target="_blank"
-                  >Creative Tim</a
+                  >CreamU</a
                 >
-                for a better web.
+                for u.
               </div>
             </div>
             <div class="col-12 col-md-6">
