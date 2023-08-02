@@ -8,8 +8,12 @@
     <div class="row justify-content-center">
       <div class="col-md-10 mb-4">
         <div style="font-size: 32px">
-          <span class="progress-icon" style="background-color: rgb(255, 204, 133)">1</span>
-          <span class="progressbar-text" style="background-color: rgb(255, 204, 133)">確認購物車</span>
+          <span class="progress-icon" style="background-color: #e5d2ab88"
+            >1</span
+          >
+          <span class="progressbar-text" style="background-color: #e5d2ab88"
+            >確認購物車</span
+          >
           <span class="progressbar-text"> > </span>
           <span class="progress-icon">2</span>
           <span class="progressbar-text">選擇取貨方式</span>
@@ -54,7 +58,12 @@
                 {{ i.subtotal }}
               </td>
               <td>
-                <v-btn :id="index" variant="text" color="#B7582A" @click="delTOD(i.id)">
+                <v-btn
+                  :id="index"
+                  variant="text"
+                  color="#B7582A"
+                  @click="delTOD(i.id)"
+                >
                   Delete
                 </v-btn>
               </td>
@@ -65,32 +74,58 @@
     </v-row>
     <v-row justify="end">
       <v-col cols="auto">
-        <h5>Normal Product List Total: {{ totalPrice }}</h5>
+        <h5>Normal Product List Total: {{ totalPrice }} NTD</h5>
       </v-col>
     </v-row>
     <v-row justify="end">
       <v-col cols="12" align="end">
-        <v-btn href="http://localhost:3000/productList" size="x-large" color="#B7582A">Buy More Normal Product</v-btn>
+        <v-btn
+          href="http://localhost:3000/productList"
+          size="x-large"
+          color="#B7582A"
+          >Buy More Normal Product</v-btn
+        >
       </v-col>
     </v-row>
 
-    <v-divider :thickness="3"></v-divider>
+    <v-divider
+      :thickness="1"
+      class="border-opacity-25"
+      color="#422e13"
+    ></v-divider>
     <!-- 商品總價與次要選項 -->
 
     <CtmizedPTable @sendCPrice="childHandler" ref="childRef"></CtmizedPTable>
-
-    <v-card class="mx-auto" variant="outlined">
+    <v-divider
+      :thickness="1"
+      class="border-opacity-100"
+      color="#422e13"
+    ></v-divider>
+    <v-card class="mx-auto" variant="tonal">
       <v-card-item>
         <div>
-          <div class="text-overline text-right mb-1">Normal Product List Total: {{ totalPrice }}</div>
-          <div class="text-overline text-right mb-1">Customized Product List Total: {{ CtotalPrice }}</div>
-          <div class="text-h6 text-right mb-1">Final Price:{{ totalPrice + CtotalPrice }}</div>
+          <div class="text-h7 text-right mb-1">
+            Normal Products Price: {{ totalPrice }} NTD
+          </div>
+          <div class="text-h7 text-right mb-1">
+            Customized Products Price: {{ CtotalPrice }} NTD
+          </div>
+          <div class="text-h5 text-right mb-1">
+            Final Price:{{ totalPrice + CtotalPrice }} NTD
+          </div>
         </div>
       </v-card-item>
 
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn variant="outlined" @click="comfirmPurchase"> Check Out </v-btn>
+        <v-btn
+          variant="outlined"
+          @click="comfirmPurchase"
+          size="x-large"
+          color="#B7582A"
+        >
+          Check Out
+        </v-btn>
       </v-card-actions>
     </v-card>
     <!-- 購買規範說明 -->
@@ -103,7 +138,7 @@
 
   <!-- footer -->
 </template>
-  
+
 <script setup>
 import { ref, computed } from "vue";
 import axios from "axios";
@@ -126,9 +161,9 @@ const CtotalPrice = ref(0);
 const childRef = ref(null);
 
 //由子元件來呼叫，並把資料傳過來
-const childHandler = CPrice => {
-  CtotalPrice.value = CPrice
-}
+const childHandler = (CPrice) => {
+  CtotalPrice.value = CPrice;
+};
 
 //由父組件呼叫子組建的function()
 function customizedPCheckOut() {
@@ -182,15 +217,14 @@ async function delTOD(id) {
 async function comfirmPurchase() {
   // let response = await axios.get(`${apiurl}${postById}${memberIdTosql}`);
 
-  alert("Sent cart order to database")
+  alert("Sent cart order to database");
   try {
-
+    customizedPCheckOut();
     const res = await axios.post(`${apiurl}${postById}`, {
       id: memberIdTosql,
-      totalp: (totalPrice.value + CtotalPrice.value),
+      totalp: totalPrice.value + CtotalPrice.value,
     });
 
-    customizedPCheckOut();
     if (res.data === "None Data") {
       return "None Data";
     } else {
@@ -199,16 +233,14 @@ async function comfirmPurchase() {
       alert(res.data);
       return res.data;
     }
-  }
-  catch (ex) {
+  } catch (ex) {
     alert(ex + memberIdTosql + totalPrice.value);
   }
 }
 
 initV();
-
 </script>
-  
+
 <style>
 .custom-container {
   width: 80%;

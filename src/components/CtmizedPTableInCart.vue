@@ -138,7 +138,7 @@
   <hr />
   <v-row justify="end">
     <v-col cols="auto">
-      <h5>Customized Product List Total:{{ TotalPrice() }}</h5>
+      <h5>Customized Product List Total:{{ TotalPrice() }} NTD</h5>
     </v-col>
   </v-row>
   <v-row justify="end">
@@ -167,10 +167,10 @@
 
 <script>
 let routerport = "https://localhost:7098/";
-import { defineEmits } from 'vue';
+import { defineEmits } from "vue";
 
 export default {
-  emits: ['sendCPrice'],
+  emits: ["sendCPrice"],
   data() {
     return {
       //先在此宣告要存放的變數位置
@@ -207,50 +207,35 @@ export default {
         let amount = this.products[i].Info.amount;
         sum += unitP * amount;
       }
-      this.$emit("sendCPrice",sum);
+      this.$emit("sendCPrice", sum);
       return sum;
     },
     async SaveToCombineDetail() {
-      const data = this.products.map((product) => {
-        return {
-          Chead: product.ComDetail[0].comId,
-          Cbody: product.ComDetail[1].comId,
-          Clhand: product.ComDetail[2].comId,
-          Crhand: product.ComDetail[3].comId,
-          Clfoot: product.ComDetail[4].comId,
-          Crfoot: product.ComDetail[5].comId,
-          SubTotal: product.Info.unitprice,
-          Type: product.Info.type,
-        };
-      });
-      //const Comdata = new FormData(data);
-
-      // try {
-      //   fetch(`/api/CombineDetails`, {
-      //     method: POST,
-      //     //Content-Type為application/json，表示以JSON回傳給API
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(data),
-      //   });
-
-      //   if (!reaponse.ok) {
-      //     throw new Error(`Network response was not ok`);
-      //   }+
-      //   const result = await Response.json();
-      // } catch (error) {
-      //   console.error(`Fetch Error`, error);
-      // }
-      console.log(data);
-      //console.log(Comdata);
-      const response = await fetch(
-        `${routerport}api/saveCombineDetail?combineDetail=${JSON.stringify(
-          data
-        )}`
-      );
-      const result = await response.text();
-      console.log(result);
+      if (this.products.length == 0) {
+        return "None Data";
+      } else {
+        const data = this.products.map((product) => {
+          return {
+            Chead: product.ComDetail[0].comId,
+            Cbody: product.ComDetail[1].comId,
+            Clhand: product.ComDetail[2].comId,
+            Crhand: product.ComDetail[3].comId,
+            Clfoot: product.ComDetail[4].comId,
+            Crfoot: product.ComDetail[5].comId,
+            SubTotal: product.Info.unitprice,
+            Type: product.Info.type,
+          };
+        });
+        localStorage.removeItem("addItemList"); //客製化商品
+        console.log(data);
+        const response = await fetch(
+          `${routerport}api/saveCombineDetail?combineDetail=${JSON.stringify(
+            data
+          )}`
+        );
+        const result = await response.text();
+        console.log(result);
+      }
     },
   },
   mounted() {
